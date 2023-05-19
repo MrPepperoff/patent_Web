@@ -29,7 +29,7 @@ btnWelcome.addEventListener('click',(evt)=>{
         );
         close.classList.add('active');
         console.log("-7" + scrollHeight + "px")
-        wrap.style.marginBottom = "-7" + scrollHeight + "px";
+        wrap.style.marginBottom = "-" + scrollHeight + "px";
         wrap.style.transition = "1s";
         setTimeout(function() {
             for(let i = 0; i < 100; i++){
@@ -44,7 +44,7 @@ btnWelcome.addEventListener('click',(evt)=>{
             // body.classList.add('');
             
             console.log(scrollHeight);
-            wrap.classList.add('');
+            // wrap.classList.add('');
         }, 1000);
     wrap.classList.remove('none');
     }, 1000);  

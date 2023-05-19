@@ -1,27 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root {
+	--red: #ff3d4f;
+	--black: #000000;
+	--dark-gray: #191a1c;
+	--gray:#323232;
+	--white: #ffffff;
+}
 html{
 	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
 }
 body{
 	position: relative;
-	background: #ff004f;  /*#191a1c;*/
-	color: #fff;
+	background: var(--red);  /*#191a1c;*/
+	color: var(--white);
 }
 
-::selection{
-	background: rgba(255, 61, 79, 0.7);
-	z-index: -1;
-}
 .welcome{
-	background: #191a1c url(../images/welcome/line-maker.svg) center center repeat;
+	background: var(--dark-gray) url(../images/welcome/line-maker.svg) center center repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	position: relative;
-	color: #323232;
+	color: var(--gray);
 	height: 100vh;
 	width: 100%;
 	font-family: 'Saira', sans-serif;
@@ -48,13 +50,13 @@ body{
 	position: relative;
 	font-family: 'Saira', sans-serif;
 	text-transform: uppercase;
-	border: 2px solid #fff;
+	border: 2px solid var(--white);
 	padding: 25px 45px;
 	font-weight: bold;
 	letter-spacing: 6px;
 	font-size: 1.2rem;
 	background: rgba(0, 0, 0, .0);
-	color: #fff;
+	color: var(--white);
 	cursor: crosshair;
 	transition: 0.8s ease-out;
 	z-index: 1;
@@ -65,7 +67,7 @@ body{
 	left: 0px;
 	width: 100%;
 	height: 100vh;
-	background: #ff3d4f;
+	background: var(--red);
 }
 .close.active {
 	bottom:0px;
@@ -76,7 +78,7 @@ body{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: #fff;
+	background: var(--white);
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -99,7 +101,7 @@ body{
 	transition: 1.5s;
 }
 .welcome .intro .welcomeBtn:hover{
-	color: #000;
+	color: var(--black);
 }
 .none{
 	display: none;
@@ -119,7 +121,7 @@ body{
 .cursor {
     width: 30px;
     height: 30px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white);
     border-radius: 50%;
     position: absolute;
     margin: 4px 0 0 4px;
@@ -176,7 +178,7 @@ body{
 	
 }
 header{
-	background: #000 url(../images/headerbg.jpg) center center no-repeat;
+	background: var(--black) url(../images/headerbg.jpg) center center no-repeat;
 	background-size: cover;
 	height: 100vh;
 	position: relative;
@@ -221,9 +223,9 @@ header .bar{
 
 }
 @media (min-width: 1400px){
-	.container{
+/*	.container{
 		width: 1140px;
-	}
+	}*/
 }
 
 
@@ -279,3 +281,9 @@ header .bar{
     left: 9px;
 }
 /*menu burger bar ****end**** */
+
+.nicescroll-rails div{
+	background: var(--red) !important;
+	display: block !important;
+
+}

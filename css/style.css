@@ -12,17 +12,17 @@ html{
 }
 body{
 	position: relative;
-	background: var(--red);  /*#191a1c;*/
+	background: var(--dark-gray);  /*#191a1c;*/
 	color: var(--white);
 }
 
 .welcome{
+	position: relative;
 	background: var(--dark-gray) url(../images/welcome/line-maker.svg) center center repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	position: relative;
+	z-index: 99999;
 	color: var(--gray);
 	height: 100vh;
 	width: 100%;
@@ -61,18 +61,7 @@ body{
 	transition: 0.8s ease-out;
 	z-index: 1;
 }
-.close{
-	position: absolute;
-	bottom: -100vh;
-	left: 0px;
-	width: 100%;
-	height: 100vh;
-	background: var(--red);
-}
-.close.active {
-	bottom:0px;
-	transition: 1s;
-}
+
 .welcome .intro .welcomeBtn::before{
 	content: '';
 	position: absolute;
@@ -87,15 +76,29 @@ body{
 	z-index: -1;
 }
 .welcome .intro .welcomeBtn.active{
-	transition: 1s;
-	margin-top: -150px;
-	opacity: 0;
+	opacity: 1;
+	animation:2s btnWel forwards;
 }
 .welcome p.active{
-	transition: 1s;
-	margin-top: -200vh;
-	opacity: 0;
+	animation:2s btnWel forwards;
+	opacity: 0.2;
 }
+
+@keyframes btnWel{
+	0%{
+		margin-top: 0px;
+/*		opacity: 1;*/
+	}
+	50%{
+		margin-top: -150px;
+		opacity: 0;
+	}
+	100%{
+		margin-top: -200vh;
+		opacity: 0;
+	}
+}
+
 .welcome .intro .welcomeBtn:hover::before{
 	margin-bottom: 0% !important;
 	transition: 1.5s;
@@ -103,11 +106,31 @@ body{
 .welcome .intro .welcomeBtn:hover{
 	color: var(--black);
 }
+.welcome.active{
+	margin-top: -100vh;
+	transition: 1s;
+}
 .none{
 	display: none;
 }
-
-
+.crossing{
+	position: absolute;
+	background: var(--red);
+	width: 100%;
+}
+.crossing.active{
+	animation: 4s crossing forwards;
+}
+@keyframes crossing{
+	0%{
+		height:150vh;
+		top:150vh;
+	}
+	100%{
+		height: 0vh;
+		top:0vh;
+	}
+}
 .wrap{
 	position: relative;
 	cursor: url('../images/cursor8x8.cur') 7 7, auto;
@@ -125,7 +148,7 @@ body{
     border-radius: 50%;
     position: absolute;
     margin: 4px 0 0 4px;
-    left:-100px;
+    left: -100px;
 
 /*    transition-duration: 200ms;*/
 
@@ -209,7 +232,10 @@ header .bar{
 	position: fixed;
 	width: 100%;
 }
-
+header .logo,
+header .bar{
+	padding: 0;
+}
 @media (min-width: 576px) and (max-width: 767px){
 
 }
@@ -223,9 +249,9 @@ header .bar{
 
 }
 @media (min-width: 1400px){
-/*	.container{
+	.container{
 		width: 1140px;
-	}*/
+	}
 }
 
 

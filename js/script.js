@@ -10,45 +10,77 @@ let wrap = document.querySelector('.wrap');
             cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
         })
 })();
-// <<Времянка>> переход от первой блока к основному
-let close = document.querySelector(".close");
-// let body = document.querySelector('body');
 
-btnWelcome.addEventListener('click',(evt)=>{
+// Полностью переписать переход от welcome к wrap
+// проблема: экран скачет
+// 
+let pEl = welcome.querySelector('p');
+let crossing = document.querySelector('.crossing');
+btnWelcome.addEventListener('click', (evt)=>{
     evt.target.classList.add('active');
     setTimeout(function() {
-        let pEl = welcome.querySelector('p');
         pEl.classList.add('active');
     }, 1000);
-    
     setTimeout(function() {
-        let scrollHeight = Math.max(
-            document.body.scrollHeight, document.documentElement.scrollHeight,
-            document.body.offsetHeight, document.documentElement.offsetHeight,
-            document.body.clientHeight, document.documentElement.clientHeight
-        );
-        close.classList.add('active');
-        console.log("-7" + scrollHeight + "px")
-        wrap.style.marginBottom = "-" + scrollHeight + "px";
-        wrap.style.transition = "1s";
-        setTimeout(function() {
-            for(let i = 0; i < 100; i++){
-
-                setTimeout(function() {
-                    // welcome.style.top = `-${i}vh`;
-                    wrap.style.top = - i - 1 +`vh`;
-                    
-                }, 5 * i);
-
-            };
-            // body.classList.add('');
-            
-            console.log(scrollHeight);
-            // wrap.classList.add('');
-        }, 1000);
-    wrap.classList.remove('none');
-    }, 1000);  
+        welcome.classList.add('active');
+        crossing.classList.add('active');
+        wrap.classList.remove('none');
+    }, 1500);
 })
+
+
+
+
+
+
+
+// <<Времянка>> переход от первой блока к основному
+
+// let body = document.querySelector('body');
+
+// btnWelcome.addEventListener('click',(evt)=>{
+    // evt.target.classList.add('active');
+    // evt.target.classList.add('none');
+
+    // setTimeout(function() {
+        
+    //     // pEl.classList.add('active');
+    //     pEl.classList.add('none');
+
+    //     // удалить
+    //     welcome.classList.add('none');
+    //     wrap.classList.remove('none');
+
+    // }, 1000);
+    
+    // setTimeout(function() {
+    //     let scrollHeight = Math.max(
+    //         document.body.scrollHeight, document.documentElement.scrollHeight,
+    //         document.body.offsetHeight, document.documentElement.offsetHeight,
+    //         document.body.clientHeight, document.documentElement.clientHeight
+    //     );
+    //     close.classList.add('active');
+    //     console.log("-7" + scrollHeight + "px")
+    //     wrap.style.marginBottom = "-" + scrollHeight + "px";
+    //     wrap.style.transition = "1s";
+    //     setTimeout(function() {
+    //         for(let i = 0; i < 100; i++){
+
+    //             setTimeout(function() {
+    //                 // welcome.style.top = `-${i}vh`;
+    //                 wrap.style.top = - i - 1 +`vh`;
+                    
+    //             }, 5 * i);
+
+    //         };
+    //         // body.classList.add('');
+            
+    //         console.log(scrollHeight);
+    //         // wrap.classList.add('');
+    //     }, 1000);
+    // wrap.classList.remove('none');
+//     }, 1000);  
+// })
 
 
 // Анимация кнопки гамбургер меню
@@ -71,14 +103,3 @@ window.addEventListener('scroll',()=>{
         fixedBar.style.background = 'transparent';
     }
 });
-
-
-
-
-
-
-
-
-// тест
-
-

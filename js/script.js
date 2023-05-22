@@ -1,10 +1,21 @@
+let html = document.querySelector('html');
+let body = document.querySelector('body');
 let welcome = document.querySelector('.welcome');
 let btnWelcome = welcome.querySelector('button');
 let wrap = document.querySelector('.wrap');
+let nicescrollRails;
+// прокрутка страницы в самый низ
+
+// отменяет прокрутку до нажатия на кнопку 
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
 
 // Анимация курсора
 (function(){
     wrap.addEventListener('mousemove', (evt)=>{
+
             let cursor = document.querySelector('.cursor');
             cursor.style.left = evt.clientX - 25  + 'px';
             cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
@@ -17,70 +28,28 @@ let wrap = document.querySelector('.wrap');
 let pEl = welcome.querySelector('p');
 let crossing = document.querySelector('.crossing');
 btnWelcome.addEventListener('click', (evt)=>{
+    nicescrollRails = document.querySelector('.nicescroll-rails div');
     evt.target.classList.add('active');
     setTimeout(function() {
         pEl.classList.add('active');
+        setTimeout(function() {
+            crossing.classList.add('active');
+        }, 500);
+        
     }, 1000);
     setTimeout(function() {
         welcome.classList.add('active');
-        crossing.classList.add('active');
-        wrap.classList.remove('none');
-    }, 1500);
+        nicescrollRails.classList.add('active');
+        
+        // востонавливает прокрутку
+        $('html, body').css({
+            height: 'auto'
+        });
+    }, 2000);
 })
 
 
 
-
-
-
-
-// <<Времянка>> переход от первой блока к основному
-
-// let body = document.querySelector('body');
-
-// btnWelcome.addEventListener('click',(evt)=>{
-    // evt.target.classList.add('active');
-    // evt.target.classList.add('none');
-
-    // setTimeout(function() {
-        
-    //     // pEl.classList.add('active');
-    //     pEl.classList.add('none');
-
-    //     // удалить
-    //     welcome.classList.add('none');
-    //     wrap.classList.remove('none');
-
-    // }, 1000);
-    
-    // setTimeout(function() {
-    //     let scrollHeight = Math.max(
-    //         document.body.scrollHeight, document.documentElement.scrollHeight,
-    //         document.body.offsetHeight, document.documentElement.offsetHeight,
-    //         document.body.clientHeight, document.documentElement.clientHeight
-    //     );
-    //     close.classList.add('active');
-    //     console.log("-7" + scrollHeight + "px")
-    //     wrap.style.marginBottom = "-" + scrollHeight + "px";
-    //     wrap.style.transition = "1s";
-    //     setTimeout(function() {
-    //         for(let i = 0; i < 100; i++){
-
-    //             setTimeout(function() {
-    //                 // welcome.style.top = `-${i}vh`;
-    //                 wrap.style.top = - i - 1 +`vh`;
-                    
-    //             }, 5 * i);
-
-    //         };
-    //         // body.classList.add('');
-            
-    //         console.log(scrollHeight);
-    //         // wrap.classList.add('');
-    //     }, 1000);
-    // wrap.classList.remove('none');
-//     }, 1000);  
-// })
 
 
 // Анимация кнопки гамбургер меню

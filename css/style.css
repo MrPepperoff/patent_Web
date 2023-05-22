@@ -15,9 +15,15 @@ body{
 	background: var(--dark-gray);  /*#191a1c;*/
 	color: var(--white);
 }
+html,
+body{
+	height: auto;
+}
+
+
 
 .welcome{
-	position: relative;
+	position: absolute;
 	background: var(--dark-gray) url(../images/welcome/line-maker.svg) center center repeat;
 	display: flex;
 	align-items: center;
@@ -77,17 +83,16 @@ body{
 }
 .welcome .intro .welcomeBtn.active{
 	opacity: 1;
-	animation:2s btnWel forwards;
+	animation: 2s btnWel forwards;
 }
 .welcome p.active{
-	animation:2s btnWel forwards;
+	animation: 2s btnWel forwards;
 	opacity: 0.2;
 }
 
 @keyframes btnWel{
 	0%{
 		margin-top: 0px;
-/*		opacity: 1;*/
 	}
 	50%{
 		margin-top: -150px;
@@ -110,37 +115,28 @@ body{
 	margin-top: -100vh;
 	transition: 1s;
 }
-.none{
-	display: none;
-}
+
 .crossing{
 	position: absolute;
 	background: var(--red);
 	width: 100%;
+/*	height: 0vh;*/
+	height: 5px;
+	top: 100vh;
 }
 .crossing.active{
-	animation: 4s crossing forwards;
+	top: 0vh;
+	height: 100vh;
+	transition: 0.5s;
 }
-@keyframes crossing{
-	0%{
-		height:150vh;
-		top:150vh;
-	}
-	100%{
-		height: 0vh;
-		top:0vh;
-	}
-}
+
 .wrap{
 	position: relative;
 	cursor: url('../images/cursor8x8.cur') 7 7, auto;
 	height: 7000px;
 	background: #aaa;
 }
-.wrap.norma{
-	margin-bottom: 0px;
-	transition: 1s;
-}
+
 .cursor {
     width: 30px;
     height: 30px;
@@ -308,8 +304,14 @@ header .bar{
 }
 /*menu burger bar ****end**** */
 
+.nicescroll-rails.none{
+	opacity: 0;
+}
 .nicescroll-rails div{
 	background: var(--red) !important;
-	display: block !important;
+	display: none !important;
 
+}
+.nicescroll-rails div.active{
+	display: block !important;
 }

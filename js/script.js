@@ -72,3 +72,15 @@ window.addEventListener('scroll',()=>{
         fixedBar.style.background = 'transparent';
     }
 });
+
+// линяя прогресса #about
+let procents = document.querySelectorAll('#about .procent');
+let progresses =document.querySelectorAll('.progress');
+
+for(let i = 0; i <procents.length; i++){
+    progresses[i].style.width = procents[i].innerHTML
+    console.log(procents[i].innerHTML);
+    console.log(progresses[i]);
+}
+
+

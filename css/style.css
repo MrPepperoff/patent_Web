@@ -1,18 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
+/* Цвета */
 	--red: #ff3d4f;
 	--black: #000000;
 	--dark-gray: #191a1c;
 	--gray:#323232;
+	--gray2:#9da1a5;
+	--gray3:#555;
 	--white: #ffffff;
+/* Шрифты */
+	--Saira:'Saira', sans-serif;
+	--Nunito: 'Nunito', sans-serif;
+	--Roboto:  'Roboto', sans-serif;
+
 }
 html{
 	font-size: 10px;
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--Roboto);
 }
 body{
+background-color: #191a1c;
+	background-image: url(../images/bg/bg-paterns.png),url("../images/bg/line-maker.svg");
+	background-position: 50% 0%, 1.3% 100%;
+	background-repeat: repeat-y, repeat;
 	position: relative;
-	background: var(--dark-gray);  /*#191a1c;*/
 	color: var(--white);
 }
 html,
@@ -24,7 +37,7 @@ body{
 
 .welcome{
 	position: absolute;
-	background: var(--dark-gray) url(../images/welcome/line-maker.svg) center center repeat;
+	background: var(--dark-gray) url(../images/bg/line-maker.svg) center center repeat;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -32,7 +45,7 @@ body{
 	color: var(--gray);
 	height: 100vh;
 	width: 100%;
-	font-family: 'Saira', sans-serif;
+	font-family: var(--Saira);
 	font-weight: 800;
 	font-size: 30rem;
 	text-transform: uppercase;
@@ -54,7 +67,7 @@ body{
 .welcome .intro .welcomeBtn{
 	overflow: hidden;
 	position: relative;
-	font-family: 'Saira', sans-serif;
+	font-family: var(--Saira);
 	text-transform: uppercase;
 	border: 2px solid var(--white);
 	padding: 25px 45px;
@@ -134,7 +147,7 @@ body{
 	position: relative;
 	cursor: url('../images/cursor8x8.cur') 7 7, auto;
 	height: 7000px;
-	background: #aaa;
+/*	background: url(../images/bg/line-maker.svg) center center repeat;*/
 }
 
 .cursor {
@@ -227,10 +240,218 @@ header .bar{
 #fixedBar{
 	position: fixed;
 	width: 100%;
+	z-index: 99;
 }
 header .logo,
 header .bar{
 	padding: 0;
+}
+section{
+	margin-top: 60px;
+	position: relative;
+	width: 100%;
+}
+section::before{
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 40px;
+	top: -40px;
+	left: 50%;
+	background: var(--red);
+}
+section h2{
+	display: inline-block;
+	font-size: 3.5rem;
+	font-family: var(--Nunito);
+	color: #9da1a5;
+	position: relative;
+	margin-bottom: 60px;
+}
+section h2::after{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	right: 15px;
+	width: 25px;
+	height: 4px;
+	border-radius: 0px 0 0 4px;
+	background: var(--red);
+}
+section h2::before{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	right: 0px;
+	width: 10px;
+	height: 4px;
+	border-radius: 0px 4px 0 0px;
+	background: var(--red);
+}
+#about .wrap_about{
+	display: flex;
+	align-items: center;
+}
+#about .avatar{
+	border: 1px solid var(--gray);
+	background: var(--dark-gray);
+
+}
+#about .avatar .photo{
+	padding: 20px;
+	position: relative;
+}
+#about .avatar .photo .avatar_img{
+	position: relative;
+	z-index: 1;
+}
+#about .avatar .photo::before{
+	content: "";
+	background: url(../images/bg/about-shape.svg) no-repeat;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	bottom: -32px;
+	left: 7px;
+	animation: 2s puls infinite;
+}
+@keyframes puls{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+#about .avatar .photo::after{
+	content: "";
+	position: absolute;
+	width: 300px;
+	height: 5px;
+	bottom: 20px;
+	left: 20px;
+	z-index: 2;
+	background: var(--red);
+}
+#about .text{
+	margin-left: 20px;
+}
+#about .text h3{
+	font-size:2.8rem;
+	font-family: var(--Saira);
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+#about .text > p{
+	color: var(--gray2);
+	font-family: var(--Nunito);
+	font-size: 1.6rem;
+	margin-bottom: 30px;
+	padding-right: 50px;
+	line-height: 3.2rem;
+}
+#about .text a{
+	position: relative;
+	overflow: hidden;
+	display: inline-flex;
+	align-items: center;
+	height: 45px;
+	text-decoration: none;
+	border: 1px solid var(--gray3);
+	color: var(--gray2);
+	font-weight: 500;
+	font-size: 1.3rem;
+	padding: 0px 30px;
+	font-family: var(--Saira);
+	box-sizing: border-box;
+}
+#about .text a::after{
+	content: '';
+	position: absolute;
+	z-index: 2;
+	width: 0%;
+	height: 0%;
+	top: 0px;
+	left: 0px;
+
+	box-sizing: border-box;
+	border-top: 0px solid var(--red);
+	border-right: 2px solid var(--red);
+}
+#about .text a::before{
+	content: '';
+	position: absolute;
+	z-index: 2;
+	width: 0%;
+	height: 0%;
+	bottom: 0px;
+	right: 0px;
+
+	box-sizing: border-box;
+	border-bottom: 0px solid var(--red);
+	border-left: 1px solid var(--red);	
+}
+#about .text a:hover::before{
+	animation: 2s borderBe forwards;
+}
+#about .text a:hover::after{
+	animation: 1s borderAf forwards;
+}
+@keyframes borderAf{
+	0%{
+		border-top-width: 1px;
+		width:0%;
+	}
+	50%{
+		border-top-width: 1px;
+		width: 100%;
+		height: 0%;
+	}
+	100%{
+		border-top-width: 1px;
+		width: 100%;
+		height: 100%;
+	}
+}
+@keyframes borderBe{
+	0%{
+	}
+	50%{
+		border-bottom-width: 1px;
+		width:0%;
+	}
+	75%{
+		border-bottom-width: 1px;
+		width: 100%;
+		height: 0%;		
+	}
+	100%{
+		border-bottom-width: 1px;
+		width: 100%;
+		height: 100%;
+	}
+}
+#about .design .name{
+	display: flex;
+	justify-content: space-between;
+	color: var(--gray2);
+	font-size: 1.4rem;
+	font-family: var(--Saira);
+	font-weight: bold;
+}
+#about .design .line{
+	width: 100%;
+	height: 3px;
+	background: var(--gray3);
+	margin: 30px 0;
+}
+#about .design .line .progress{
+	background: var(--red);
+	height: 3px;
+	width: 0%;
 }
 @media (min-width: 576px) and (max-width: 767px){
 

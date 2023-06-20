@@ -368,7 +368,8 @@ section h2::before{
 	font-family: var(--Saira);
 	box-sizing: border-box;
 }
-#about .text a::after{
+#about .text a::after,
+#services .service_item::after{
 	content: '';
 	position: absolute;
 	z-index: 2;
@@ -381,7 +382,8 @@ section h2::before{
 	border-top: 0px solid var(--red);
 	border-right: 2px solid var(--red);
 }
-#about .text a::before{
+#about .text a::before,
+#services .service_item::before{
 	content: '';
 	position: absolute;
 	z-index: 2;
@@ -394,11 +396,13 @@ section h2::before{
 	border-bottom: 0px solid var(--red);
 	border-left: 1px solid var(--red);	
 }
-#about .text a:hover::before{
-	animation: 2s borderBe forwards;
+#about .text a:hover::before,
+#services .service_item:hover::before{
+	animation: 1s borderBe forwards;
 }
-#about .text a:hover::after{
-	animation: 1s borderAf forwards;
+#about .text a:hover::after,
+#services .service_item:hover::after{
+	animation: 0.5s borderAf forwards;
 }
 @keyframes borderAf{
 	0%{
@@ -452,6 +456,57 @@ section h2::before{
 	background: var(--red);
 	height: 3px;
 	width: 0%;
+}
+#services .service_col{
+	
+
+}
+#services .service_item{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	font-size: 1.6rem;
+	color: var(--gray2);
+	font-family: var(--Nunito);
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid var(--gray);
+	width: 95%;
+	height: 100%;
+	margin: 0 auto;
+	box-shadow: 0px 9px 31px 6px rgb(0 0 0 / 20%);
+	background: var(--dark-gray);
+}
+
+#services .service_item img{
+	width: 50px;
+	height: auto;
+	margin-bottom: 15px;
+}
+#services .service_item:hover{
+	background: rgba(25, 26, 28, 0.3);
+	transition: 0.5s;
+}
+#services .service_item:hover img{
+	opacity: 0.5;
+	transition: 0.5s;
+}
+#services .service_item h3{
+	font-size: 2rem;
+	color: var(--white);
+	font-weight: bold;
+	font-family: var(--Saira);
+	margin-bottom: 15px;
+}
+#services .service_item p{
+	line-height: 2.7rem;
+}
+#services .service_col:nth-child(2){
+	margin-top: 20px;
+}
+#services .service_col:nth-child(2n+1){
+	margin-bottom: 20px;
+
 }
 @media (min-width: 576px) and (max-width: 767px){
 
@@ -536,3 +591,4 @@ section h2::before{
 .nicescroll-rails div.active{
 	display: block !important;
 }
+

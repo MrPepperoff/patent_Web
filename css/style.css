@@ -20,6 +20,14 @@
   --Roboto: "Roboto", sans-serif;
 }
 
+.scroll-element {
+  display: block;
+}
+
+.scroll-x {
+  display: none;
+}
+
 html {
   font-size: 10px;
   font-family: var(--Roboto);
@@ -163,6 +171,8 @@ body {
 }
 
 .wrap {
+  height: 100vh;
+  overflow: auto;
   position: relative;
   cursor: url("../images/cursor8x8.cur") 7 7, auto;
 }
@@ -411,7 +421,7 @@ header .bar {
 #fixedBar {
   position: fixed;
   width: 100%;
-  z-index: 99;
+  z-index: 9;
 }
 
 header .logo,
@@ -1407,6 +1417,7 @@ section h2::before {
 }
 
 footer {
+  overflow-x: hidden;
   position: relative;
   font-family: var(--Saira);
   font-size: 1.6rem;
@@ -1418,7 +1429,7 @@ footer {
 footer::after {
   content: "";
   width: 80px;
-  height: 1px;
+  height: 2px;
   background: var(--red);
   position: absolute;
   top: -1px;

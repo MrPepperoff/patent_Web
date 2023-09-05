@@ -3,8 +3,6 @@ let body = document.querySelector('body');
 let welcome = document.querySelector('.welcome');
 let btnWelcome = welcome.querySelector('button');
 let wrap = document.querySelector('.wrap');
-let ascrail2000;
-let ascrail2001;
 // прокрутка страницы в самый низ
 
 // отменяет прокрутку до нажатия на кнопку 
@@ -30,7 +28,7 @@ let pEl = welcome.querySelector('p');
 let crossing = document.querySelector('.crossing');
 
 btnWelcome.addEventListener('click', (evt)=>{
-    ascrail2001 = document.querySelector('#ascrail2001 div');
+    // ascrail2001 = document.querySelector('#ascrail2001 div');
     evt.target.classList.add('active');
     setTimeout(function() {
         pEl.classList.add('active');
@@ -41,8 +39,8 @@ btnWelcome.addEventListener('click', (evt)=>{
     }, 1000);
     setTimeout(function() {
         welcome.classList.add('active');
-        console.log(ascrail2001);
-        ascrail2001.classList.add('active');
+        // console.log(ascrail2001);
+        // ascrail2001.classList.add('active');
         
         // востонавливает прокрутку
         $('html, body').css({
@@ -62,7 +60,6 @@ let radius = document.querySelector('.nav_radius');
 let rad_red = document.querySelector('.nav_red');
 
 bar.addEventListener('click', ()=>{
-    ascrail2000 = document.querySelector('#ascrail2000 div');
     bar.classList.toggle('open');
 
     // остановить прокрутку
@@ -76,8 +73,6 @@ bar.addEventListener('click', ()=>{
 
         setTimeout(function(){
             radius.classList.remove('active'); 
-            ascrail2000.classList.remove('active');
-            ascrail2001.classList.add('active');
         }, 250);
 
         rad_red.classList.add('active');
@@ -87,6 +82,7 @@ bar.addEventListener('click', ()=>{
             
             // запустить прокрутку
             $('html, body').css({
+                overflow: 'auto',
                 height: 'auto'
             });
         }, 500);

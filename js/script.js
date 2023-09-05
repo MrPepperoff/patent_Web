@@ -41,6 +41,7 @@ btnWelcome.addEventListener('click', (evt)=>{
     }, 1000);
     setTimeout(function() {
         welcome.classList.add('active');
+        console.log(ascrail2001);
         ascrail2001.classList.add('active');
         
         // востонавливает прокрутку

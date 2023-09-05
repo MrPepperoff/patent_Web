@@ -8,15 +8,15 @@ let ascrail2001;
 // прокрутка страницы в самый низ
 
 // отменяет прокрутку до нажатия на кнопку 
-        $('html, body').css({
-            overflow: 'hidden',
-            height: '100%'
-        });
+
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
 
 // Анимация курсора
 (function(){
     wrap.addEventListener('mousemove', (evt)=>{
-
             let cursor = document.querySelector('.cursor');
             cursor.style.left = evt.clientX - 25  + 'px';
             cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
@@ -45,6 +45,7 @@ btnWelcome.addEventListener('click', (evt)=>{
         
         // востонавливает прокрутку
         $('html, body').css({
+            overflow: 'auto',
             height: 'auto'
         });
     }, 2000);
@@ -132,25 +133,6 @@ for(let i = 0; services['members'] >= i; i++){
         members.innerHTML = i;
     }, 250*i);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

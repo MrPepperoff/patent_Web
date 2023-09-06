@@ -20,12 +20,10 @@
 	--Roboto:  'Roboto', sans-serif;
 
 }
-.scroll-element{
-    display: block;
-}
-.scroll-x{
-    display: none;
-}
+// .scroll-element{
+//     display: block;
+// }
+
 html{
 	font-size: 10px;
 	font-family: var(--Roboto);
@@ -175,7 +173,7 @@ body{
     border: 1px solid var(--white);
     border-radius: 50%;
     position: absolute;
-    margin: 4px 0 0 4px;
+    margin: 5px 0 0 5px;
     left: -100px;
 
 /*    transition-duration: 200ms;*/
@@ -186,25 +184,19 @@ body{
     z-index: 99;
 }
 @keyframes cursorAnim{
-		0%{
-		width: 35px;
-		height: 35px;
-		
+	0%{
+		transform: scale(1.1);
 	}
 	100%{
-		width: 45px;
-		height: 45px;
-		margin-top: 0px;
-		margin-left: 0px;
-
+		transform: scale(1.5);
 	}
 }
 .cursor:after {
 	content: "";
 	width: 5px;
 	height: 5px;
-	top: 6px;
-	left: 6px;
+	top: 5px;
+	left: 5px;
 	position: absolute;
 	border: 8px solid gray;
 	border-radius: 50%;
@@ -213,18 +205,10 @@ body{
 }
 @keyframes cursorAnim2{
 	0%{
-		top: 6px;
-		left: 6px;
-		width: 2px;
-		height: 2px;
-		border-width: 10px;
+		transform: scale(1);
 	}
 	100%{
-		top: 6px;
-		left: 6px;
-		width: 5px;
-		height: 5px;
-		border-width: 14px;
+		transform: scale(0.4);
 	}
 	
 }
@@ -1401,15 +1385,4 @@ footer p{
 }
 /*menu burger bar ****end**** */
 
-.nicescroll-rails.none{
-	opacity: 0;
-}
-.nicescroll-rails div{
-	background: var(--red) !important;
-	display: none !important;
-
-}
-.nicescroll-rails div.active{
-	display: block !important;
-}
 

@@ -4,6 +4,7 @@ let welcome = document.querySelector('.welcome');
 let btnWelcome = welcome.querySelector('button');
 let wrap = document.querySelector('.wrap');
 // прокрутка страницы в самый низ
+// Window.scrollTo()прокручивает до определенного набора координат в документе.
 
 // отменяет прокрутку до нажатия на кнопку 
 
@@ -18,6 +19,9 @@ $('html, body').css({
             let cursor = document.querySelector('.cursor');
             cursor.style.left = evt.clientX - 25  + 'px';
             cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
+            // console.log(window.pageYOffset);
+            
+            console.log(window.pageYOffset);
         })
 })();
 

@@ -41,7 +41,7 @@
         cursor: default;
     }
 
-    &.scroll-x.scroll-scrollx_visible,
+    // &.scroll-x.scroll-scrollx_visible,
     &.scroll-y.scroll-scrolly_visible {
         display: block;
     }
@@ -94,23 +94,23 @@
 .scrollbar-inner > .scroll-element div {
     display: block;
     height: 100%;
-    left: 0;
+    left: 1px;
     top: 0;
     width: 100%;
 }
 
 .scrollbar-inner > .scroll-element.scroll-x {
-    bottom: 2px;
+    bottom: 0px;
     height: 8px;
     left: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .scrollbar-inner > .scroll-element.scroll-y {
     height: 100%;
     right: 2px;
     top: 0;
-    width: 8px;
+    width: 4px;
 }
 
 .scrollbar-inner > .scroll-element .scroll-element_outer {
@@ -134,18 +134,18 @@
 
 .scrollbar-inner > .scroll-element .scroll-element_track { background-color: var(--gray); }
 .scrollbar-inner > .scroll-element .scroll-bar { background-color: var(--red); }
-.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
-.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #f1253a; }
+// .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
 
 
 /* update scrollbar offset if both scrolls are visible */
 
 .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
-.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
+// .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
 
 
 .scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
-.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+// .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
 
 
 

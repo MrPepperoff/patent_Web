@@ -3,15 +3,15 @@ let body = document.querySelector('body');
 let welcome = document.querySelector('.welcome');
 let btnWelcome = welcome.querySelector('button');
 let wrap = document.querySelector('.wrap');
+// scroll 
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-inner').scrollbar();
+});
+
 // прокрутка страницы в самый низ
 // Window.scrollTo()прокручивает до определенного набора координат в документе.
 
 // отменяет прокрутку до нажатия на кнопку 
-
-$('html, body').css({
-    overflow: 'hidden',
-    height: '100%'
-});
 
 // Анимация курсора
 (function(){
@@ -19,9 +19,8 @@ $('html, body').css({
             let cursor = document.querySelector('.cursor');
             cursor.style.left = evt.clientX - 25  + 'px';
             cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
-            // console.log(window.pageYOffset);
             
-            console.log(window.pageYOffset);
+            // console.log(window.pageYOffset);
         })
 })();
 
@@ -32,7 +31,6 @@ let pEl = welcome.querySelector('p');
 let crossing = document.querySelector('.crossing');
 
 btnWelcome.addEventListener('click', (evt)=>{
-    // ascrail2001 = document.querySelector('#ascrail2001 div');
     evt.target.classList.add('active');
     setTimeout(function() {
         pEl.classList.add('active');
@@ -42,15 +40,7 @@ btnWelcome.addEventListener('click', (evt)=>{
         
     }, 1000);
     setTimeout(function() {
-        welcome.classList.add('active');
-        // console.log(ascrail2001);
-        // ascrail2001.classList.add('active');
-        
-        // востонавливает прокрутку
-        $('html, body').css({
-            overflow: 'auto',
-            height: 'auto'
-        });
+        welcome.classList.add('active');     
     }, 2000);
 })
 
@@ -60,18 +50,11 @@ btnWelcome.addEventListener('click', (evt)=>{
 
 // гамбургер меню
 let bar = document.querySelector('#nav_icon');
-let radius = document.querySelector('.nav_radius');
-let rad_red = document.querySelector('.nav_red');
+let radius = document.querySelector('.nav__radius');
+let rad_red = document.querySelector('.nav__red');
 
 bar.addEventListener('click', ()=>{
     bar.classList.toggle('open');
-
-    // остановить прокрутку
-    $('html, body').css({
-        overflow: 'hidden',
-        height: '100%'
-    });
-    
 
     if(radius.classList.contains('active')){
 
@@ -80,23 +63,13 @@ bar.addEventListener('click', ()=>{
         }, 250);
 
         rad_red.classList.add('active');
-
         setTimeout(function(){
             rad_red.classList.remove('active');
-            
-            // запустить прокрутку
-            $('html, body').css({
-                overflow: 'auto',
-                height: 'auto'
-            });
         }, 500);
     }
     else{
         radius.classList.add('active');
-        ascrail2000.classList.add('active');
-        ascrail2001.classList.remove('active');
     }
-    
 })
 // работа подменю
 let menu = document.querySelector('#menu span');
@@ -112,10 +85,10 @@ let project = document.querySelector("#project");
 let members = document.querySelector("#members");
 
 let services = {'client': 10, 'project': 950, 'members': 40};
-console.log(client);
-console.log(services['client']);
-console.log(services['project']);
-console.log(services['members']);
+// console.log(client);
+// console.log(services['client']);
+// console.log(services['project']);
+// console.log(services['members']);
 
 
 
@@ -145,9 +118,12 @@ for(let i = 0; services['members'] >= i; i++){
 
 // При прокрутке выделяет фиксированную панели
 let fixedBar = document.querySelector('#fixedBar');
+// .pageYOffset;
 
 window.addEventListener('scroll',()=>{
-    if(window.pageYOffset >= 100){
+    let pageY = window.scrollY;
+    console.log(pageY);
+    if(pageY >= 100){
         fixedBar.style.transition = '0.2s';
         fixedBar.style.background = '#1d1e20';
     }

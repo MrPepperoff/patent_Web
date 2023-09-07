@@ -114,7 +114,7 @@
             // init variables
             var scrollLeft = this.container.scrollLeft();
             var scrollTop = this.container.scrollTop();
-
+            
             this.container.insertBefore(this.wrapper).css({
                 "height": "",
                 "margin": "",

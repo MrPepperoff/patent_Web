@@ -12,12 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-
-	<!-- <script src="js/jquery.min.js"></script> -->
-	<!-- New -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/prettify.js"></script>
-    
     <script src="js/jquery.scrollbar.js"></script>
 </head>
 
@@ -31,15 +26,15 @@
 	</div>
 	<div class="wrap scrollbar-inner">
 		<div class="cursor"></div>
-		<header>
+		<header class="header">
 			<div class="fixed" id="fixedBar">
 				<div class="container">
-					<div class="head_top row justify-content-between">
-						<div class="logo col-4">
+					<div class="header__top row justify-content-between">
+						<div class="header__top__logo col-4">
 							<img src="images/logo.png" alt="logo">
 						</div>
 						
-						<div class="bar col-2 col-sm-2">
+						<div class="header__top-bar col-2 col-sm-2">
 							<div class="row justify-content-end">
 								<div id="nav_icon" class="col-2">
 								    <span></span>
@@ -47,78 +42,71 @@
 								    <span></span>
 								</div>
 							</div>
-							<div class="nav_radius">
-								<div class="nav_radius_wrap">
-									<div class="container">
-										<div class="row row_nav">
-											<div class="col-6" id="menuScroll">
-												<ul class="menu scrollbar-inner" id="menu">
-													<li>
-														<span class="link"><p class="number">01</p>Home</span>
-														<ul class="submenu" id="submenu">
-															<li><a class="sublink" href="#">Home.1</a></li>
-															<li><a class="sublink" href="#">Home.2</a></li>
-															<li><a class="sublink" href="#">Home.3</a></li>
-															<li><a class="sublink" href="#">Home.4</a></li>
-															<li><a class="sublink" href="#">Home.5</a></li>
-															<li><a class="sublink" href="#">Home.6</a></li>
-															<li><a class="sublink" href="#">Home.7</a></li>
-															<li><a class="sublink" href="#">Home.8</a></li>
-															<li><a class="sublink" href="#">Home.9</a></li>
-														</ul>
-													</li>
-													<li><a  class="link" href="#"><p class="number">02</p>About</a></li>
-													<li><a  class="link" href="#"><p class="number">03</p>Services</a></li>
-													<li><a  class="link" href="#"><p class="number">04</p>Resume</a></li>
-													<li><a  class="link" href="#"><p class="number">05</p>Portfolio</a></li>
-													<li><a  class="link" href="#"><p class="number">06</p>Team</a></li>
-													<li><a  class="link" href="#"><p class="number">07</p>News</a></li>
-													<li><a  class="link" href="#"><p class="number">08</p>Contact</a></li>
-												</ul>
-											</div>
-											<div class="col-6" >
-												<ul class="address_all">
-													<li>
-														<h3>Email</h3>
-														<p>Support@example.com</p>
-													</li>
-													<li>
-														<h3>Call us</h3>
-														<p>700 001 70 16</p>
-													</li>
-													<li>
-														<h3>Address</h3>
-														<p>405, Royal Square, NR</p>
-													</li>
-												</ul>
+							<div class="nav">
+								<div class="nav__radius">
+									<div class="nav__radius-wrap">
+										<div class="container">
+											<div class="row row_nav">
+												<div class="col-6 scrollbar-inner">
+													<ul class="nav__menu scrollbar-inner" id="menu">
+														<li>
+															<span class="nav__menu-link"><p class="number">01</p>Home</span>
+															<ul class="nav__submenu" id="submenu">
+																<li><a class="nav__submenu-link" href="#1">Home.1</a></li>
+																<li><a class="nav__submenu-link" href="#2">Home.2</a></li>
+																<li><a class="nav__submenu-link" href="#3">Home.3</a></li>
+																<li><a class="nav__submenu-link" href="#4">Home.4</a></li>
+																<li><a class="nav__submenu-link" href="#5">Home.5</a></li>
+																<li><a class="nav__submenu-link" href="#6">Home.6</a></li>
+																<li><a class="nav__submenu-link" href="#7">Home.7</a></li>
+																<li><a class="nav__submenu-link" href="#8">Home.8</a></li>
+																<li><a class="nav__submenu-link" href="#9">Home.9</a></li>
+															</ul>
+														</li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">02</p>About</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">03</p>Services</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">04</p>Resume</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">05</p>Portfolio</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">06</p>Team</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">07</p>News</a></li>
+														<li><a  class="nav__menu-link" href="#"><p class="number">08</p>Contact</a></li>
+													</ul>
+												</div>
+												<div class="col-6" >
+													<ul class="nav__address">
+														<li>
+															<h3>Email</h3>
+															<p>Support@example.com</p>
+														</li>
+														<li>
+															<h3>Call us</h3>
+															<p>700 001 70 16</p>
+														</li>
+														<li>
+															<h3>Address</h3>
+															<p>405, Royal Square, NR</p>
+														</li>
+													</ul>
+												</div>
 											</div>
 										</div>
-										
 									</div>
-									<!-- <script>							
-										$(document).ready(
-										function() {
-											$("#menu").niceScroll();
-										});								
-									</script> 	 -->
 								</div>
+								<div class="nav__red"></div>	
 							</div>
-							<div class="nav_red"></div>
+							
 						</div>
 					</div>	
 				</div>	
 			</div>
-			
-			
-			<div class="head_center">
+			<div class="header__center">
 				<div class="container">
 					<div class="row center_wrap">
-						<div class="col-12 name">
+						<div class="col-12 header__center__name">
 							<p>I Am Razan Taylor</p>
 						</div>
-						<div class="col-12 prof">
-							<span id="element" class="textfull"></span>
-
+						<div class="col-12 header__center__prof">
+							<span id="element"></span>
 							<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 							<!-- текст печатка -->
 							<script>
@@ -129,19 +117,18 @@
 									loop: true,
 								});	
 							</script>
-
 						</div>
-						<div class="col-12 position">
-							<ul class="position_wrap">
-								<li class="position_item">
+						<div class="col-12 header__center__position position">
+							<ul class="position__wrap">
+								<li class="position__item">
 									<p class="country">Morocco</p>
 									<p class="city">Rabat - Casablanca</p>
 								</li>
-								<li class="position_item">
+								<li class="position__item">
 									<p class="country">USA</p>
 									<p class="city">Californie - Detroit</p>
 								</li>
-								<li class="position_item">
+								<li class="position__item">
 									<p class="country">Canada</p>
 									<p class="city">Delta - Greenwood</p>
 								</li>
@@ -150,15 +137,15 @@
 					</div>	
 				</div>
 			</div>
-			<div class="head_bottom">
+			<div class="header__bottom">
 				<div class="container">
-					<div class="col mouse_wrap">
+					<div class="col header__bottom__mouse">
 						<a href="#content">
 							<div class="mouse"></div>	
 						</a>
-						<div class="line_mouse">
-							<div class="point"></div>
-							<div class="line_dashed"></div>
+						<div class="line">
+							<div class="line__point"></div>
+							<div class="line__dashed"></div>
 						</div>
 					</div>
 				</div>
@@ -267,43 +254,6 @@
 										</div>
 									</div>
 								</div>
-								<!-- скрипт набега цифр -->
-								<script>
-									(function($) {
-										'use strict';
-										// ========================================================================= //
-										//      [ Counter ]
-										// ========================================================================= //
-										var a = 0;
-										$(window).on('scroll', function() {
-
-											var oTop = $('.counter').offset().top - window.innerHeight;
-											if (a == 0 && $(window).scrollTop() > oTop) {
-												$('.counter-value').each(function() {
-													var $this = $(this),
-													countTo = $this.attr('data-count');
-													$({
-														countNum: $this.text()
-													}).animate({
-														countNum: countTo
-													},
-
-													{
-														duration: 7000,
-														easing: 'swing',
-														step: function() {
-															$this.text(Math.floor(this.countNum));
-														},
-														complete: function() {
-															$this.text(this.countNum);
-														}
-													});
-												});
-												a = 1;
-											}
-										});
-									})(jQuery);
-								</script>
 							</div>
 						</div>
 					</div>
@@ -614,16 +564,16 @@
 									</div>
 								</div>
 								<div class="col-8">
-									<form action="#" class="touch_form">
+									<form action="#" class="touch_form" id="form">
 										<div class="row justify-content-between row_touch">
 											<div class="col-4 ">
 												<input type="text" name="user" placeholder="Username *">
 											</div>
 											<div class="col-4 ">
-												<input type="text" placeholder="E-mail *">
+												<input type="text" name="email" placeholder="E-mail *">
 											</div>
 											<div class="col-4 ">
-												<input type="text" placeholder="Phone">
+												<input type="text" name="phone"placeholder="Phone">
 											</div>
 											<div class="col-12">
 												<textarea name="textarea"
@@ -667,15 +617,7 @@
 			</div>
 		</footer>
 	</div>
-
-	<!-- New -->
-	<script type="text/javascript">
-		jQuery(document).ready(function(){
-			jQuery('.scrollbar-inner').scrollbar();
-		});
-	</script>
 	<script src="js/script.js"></script>
-
 </body>
 
 </html>

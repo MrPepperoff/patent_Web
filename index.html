@@ -36,7 +36,7 @@
 						
 						<div class="header__top-bar col-2 col-sm-2">
 							<div class="row justify-content-end">
-								<div id="nav_icon" class="col-2">
+								<div id="nav_icon" class="col-2 nav__icon">
 								    <span></span>
 								    <span></span>
 								    <span></span>
@@ -153,81 +153,78 @@
 		</header>
 		<main>
 			<a name="content"></a>
-			<section id="about">
+			<section id="about" class="about">
 				<div class="container">
-					<div class="row">
-						<div>
-							<h2>About Us</h2>
-						</div>
-						<div class="wrap_about">
-							<div class="avatar">
-								<div class="photo">
-									<img class="avatar_img" src="images/about_1.jpg" alt="avatar">
-								</div>
-							</div>
-							<div class="text">
-								<h3>Hello, Im Razan Taylor</h3>
-								<p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.English person,</p>
-								<div class="design">
-									<ul>
-										<li>
-											<div class="name">
-												<p>Product Design</p>
-												<p class="procent">100%</p>
-											</div>
-											<div class="line">
-												<div class="progress"></div>
-											</div>
-										</li>
-										<li>
-											<div class="name">
-												<p>Ux Design</p>
-												<p class="procent">90%</p>
-											</div>
-											<div class="line">
-												<div class="progress"></div>
-											</div>
-										</li>
-										<li>
-											<div class="name">
-												<p>Mobile Design</p>
-												<p class="procent">70%</p>
-											</div>
-											<div class="line">
-												<div class="progress"></div>
-											</div>
-										</li>
-									</ul>
-								</div>
-								<a href="#">Hire Me <i class="fa-solid fa-chevron-right" style="margin-left: 10px; font-size: 1rem;"></i></a> 
-							</div>
-						</div>	
+					<div>
+						<h2>About Us</h2>
 					</div>
-					
+					<div class="row about__wrap">
+						<div class="col-lg-6 col-md-12 avatar">
+							<div class="avatar__wrap">
+								<img class="avatar__img" src="images/about_1.jpg" alt="avatar">
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-12 text">
+							<h3>Hello, Im Razan Taylor</h3>
+							<p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family.English person,</p>
+							<div class="text__design">
+								<ul>
+									<li>
+										<div class="name">
+											<p>Product Design</p>
+											<p class="procent">100%</p>
+										</div>
+										<div class="line">
+											<div class="progress"></div>
+										</div>
+									</li>
+									<li>
+										<div class="name">
+											<p>Ux Design</p>
+											<p class="procent">90%</p>
+										</div>
+										<div class="line">
+											<div class="progress"></div>
+										</div>
+									</li>
+									<li>
+										<div class="name">
+											<p>Mobile Design</p>
+											<p class="procent">70%</p>
+										</div>
+										<div class="line">
+											<div class="progress"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="link">Hire Me <i class="fa-solid fa-chevron-right" style="margin-left: 10px; font-size: 1rem;"></i></a> 
+						</div>
+					</div>	
 				</div>
 			</section>
-			<section id="services" class="counter">
+			<section id="services" class="services">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<h2>Services</h2>
 							<div class="row">
-								<div class="service_col col-4 col_global">
-									<a href="#" class="service_item item_global">
+								<div class="services__col col-4 global-pos">
+									<a href="#" class="services__item global-pos__item link">
 										<img src="images/icon/service_icon2.png" alt="service icon">
 										<h3>Branding</h3>
 										<p>To an English person, it will seem like simplified English,told me what</p>
 									</a>
 								</div>
-								<div class="service_col col-4 col_global">
-									<a href="#" class="service_item item_global">
+								<div class="services__col col-4 global-pos">
+									<a href="#" class="services__item global-pos__item link">
 										<img src="images/icon/service_icon3.png" alt="service icon">
 										<h3>Movies</h3>
 										<p>To an English person, it will seem like simplified English,told me what</p>
 									</a>
 								</div>
-								<div class="service_col col-4 col_global">
-									<a href="#" class="service_item item_global">
+								<div class="services__col col-4 global-pos">
+									<a href="#" class="services__item global-pos__item link">
 										<img src="images/icon/service_icon4.png" alt="service icon">
 										<h3>Marketing</h3>
 										<p>To an English person, it will seem like simplified English,told me what</p>
@@ -236,19 +233,19 @@
 							</div>
 						</div>
 						<div class="col-12">
-							<div class="client">
-								<div class="client_wrap" id="counter">
+							<div class="services__client">
+								<div class="services__client-wrap" id="counter">
 									<div class="row">
-										<div class="col-4 client_item">
+										<div class="col-4 services__client-item">
 											<span id="client">0</span>
 											<p>Happy Client</p>
 
 										</div>
-										<div class="col-4 client_item">
+										<div class="col-4 services__client-item">
 											<span id="project">0</span>
 											<p>Successful Project</p>
 										</div>
-										<div class="col-4 client_item">
+										<div class="col-4 services__client-item">
 											<span id="members">0</span>
 											<p>Team Members</p>
 										</div>
@@ -259,97 +256,93 @@
 					</div>
 				</div>
 			</section>
-			<section id="projects">
+			<section id="projects" class="projects">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<h2>Projects</h2>
-							<div class="content">
-								<div class="container">
-									<div class="row first_tier">
-										<div class="col-6 content_item">
-											<div class="content_img">
-												<a href="#">
-													<img src="images/project/1.jpg" alt="project">
-													<div class="overlay">
-														<a href="#" class="look">
-															<i class="fa-regular fa-eye"></i>
-														</a>
-													</div>
-													<div class="bottom">
-														<h4>Mockup Collection</h4>
-														<p>Branding</p>
-													</div>
-												</a>		
-											</div>
+							<div class="projects__content">
+								<div class="row first_tier">
+									<div class="col-6 projects__content-item">
+										<div class="projects__content-img">
+											<a href="#">
+												<img src="images/project/1.jpg" alt="project">
+												<div class="overlay">
+													<a href="#" class="look">
+														<i class="fa-regular fa-eye"></i>
+													</a>
+												</div>
+												<div class="bottom">
+													<h4>Mockup Collection</h4>
+													<p>Branding</p>
+												</div>
+											</a>		
 										</div>
-										<div class="col-6 content_item">
-											<div class="content_img">
-												<a href="#">
-													<img src="images/project/2.jpg" alt="project">
-													<div class="overlay">
-														<a href="#" class="look">
-															<i class="fa-regular fa-eye"></i>
-														</a>
-													</div>
-													<div class="bottom">
-														<h4>Mockup Collection</h4>
-														<p>Branding</p>
-													</div>
-												</a>		
-											</div>
+									</div>
+									<div class="col-6 projects__content-item">
+										<div class="projects__content-img">
+											<a href="#">
+												<img src="images/project/2.jpg" alt="project">
+												<div class="overlay">
+													<a href="#" class="look">
+														<i class="fa-regular fa-eye"></i>
+													</a>
+												</div>
+												<div class="bottom">
+													<h4>Mockup Collection</h4>
+													<p>Branding</p>
+												</div>
+											</a>		
 										</div>
 									</div>
 								</div>
-								<div class="container">
-									<div class="row second_tier">
-										<div class="col-4 content_item">
-											<div class="content_img">
-												<a href="#">
-													<img src="images/project/3.jpg" alt="project">
-													<div class="overlay">
-														<a href="#" class="look">
-															<i class="fa-regular fa-eye"></i>
-														</a>
-													</div>
-													<div class="bottom">
-														<h4>Mockup Collection</h4>
-														<p>Branding</p>
-													</div>
-												</a>		
-											</div>
+								<div class="row second_tier">
+									<div class="col-4 projects__content-item">
+										<div class="projects__content-img">
+											<a href="#">
+												<img src="images/project/3.jpg" alt="project">
+												<div class="overlay">
+													<a href="#" class="look">
+														<i class="fa-regular fa-eye"></i>
+													</a>
+												</div>
+												<div class="bottom">
+													<h4>Mockup Collection</h4>
+													<p>Branding</p>
+												</div>
+											</a>		
 										</div>
-										<div class="col-4 content_item">
-											<div class="content_img">
-												<a href="#">
-													<img src="images/project/4.jpg" alt="project">
-													<div class="overlay">
-														<a href="#" class="look">
-															<i class="fa-regular fa-eye"></i>
-														</a>
-													</div>
-													<div class="bottom">
-														<h4>Mockup Collection</h4>
-														<p>Branding</p>
-													</div>
-												</a>		
-											</div>
+									</div>
+									<div class="col-4 projects__content-item">
+										<div class="projects__content-img">
+											<a href="#">
+												<img src="images/project/4.jpg" alt="project">
+												<div class="overlay">
+													<a href="#" class="look">
+														<i class="fa-regular fa-eye"></i>
+													</a>
+												</div>
+												<div class="bottom">
+													<h4>Mockup Collection</h4>
+													<p>Branding</p>
+												</div>
+											</a>		
 										</div>
-										<div class="col-4 content_item">
-											<div class="content_img">
-												<a href="#">
-													<img src="images/project/5.jpg" alt="project">
-													<div class="overlay">
-														<a href="#" class="look">
-															<i class="fa-regular fa-eye"></i>
-														</a>
-													</div>
-													<div class="bottom">
-														<h4>Mockup Collection</h4>
-														<p>Branding</p>
-													</div>
-												</a>		
-											</div>
+									</div>
+									<div class="col-4 projects__content-item">
+										<div class="projects__content-img">
+											<a href="#">
+												<img src="images/project/5.jpg" alt="project">
+												<div class="overlay">
+													<a href="#" class="look">
+														<i class="fa-regular fa-eye"></i>
+													</a>
+												</div>
+												<div class="bottom">
+													<h4>Mockup Collection</h4>
+													<p>Branding</p>
+												</div>
+											</a>		
 										</div>
 									</div>
 								</div>
@@ -358,16 +351,15 @@
 					</div>
 				</div>
 			</section>
-			<section id="resume">
+			<section id="resume" class="resume">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<h2>Resume</h2>
 							<div class="container">
 								<div class="row">
-									<div class="resume_col col-4  col_global">
-										<div class="resume_item item_global active">
-
+									<div class="resume__col col-4 global-pos">
+										<div class="resume__item global-pos__item active">
 											<h3>Experience.</h3>
 											<p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine.</p>
 											<div class="line"></div>
@@ -375,14 +367,10 @@
 											<p>Photographer-intern 2016–2017</p>
 											<h4>Studio e.Oliver</h4>
 											<p>Photographer-retoucher 2017–Present</p>
-
-
-
 										</div>
 									</div>
-									<div class="resume_col col-4 col_global">
-										<div class="resume_item item_global">
-
+									<div class="resume__col col-4 global-pos">
+										<div class="resume__item global-pos__item">
 											<h3>Education.</h3>
 											<p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine.</p>
 											<div class="line"></div>
@@ -392,8 +380,8 @@
 											<p>Bloomfield Hills, MI 2013–2015</p>
 										</div>
 									</div>
-									<div class="resume_col col-4  col_global">
-										<div class="resume_item item_global">
+									<div class="resume__col col-4 global-pos">
+										<div class="resume__item global-pos__item">
 
 											<h3>Equipment.</h3>
 											<p>To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine.</p>
@@ -410,15 +398,15 @@
 					</div>
 				</div>
 			</section>
-			<section id="teamiteam">
+			<section id="teamiteam" class="teamiteam">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<h2>Our Team Showcase</h2>
 							<div class="row">
-								<div class="teamiteam_col col-4 col_global ">
-									<div class="teamiteam_item item_global">
-										<div class="teamiteam_img">
+								<div class="teamiteam__col col-4 global-pos">
+									<div class="teamiteam__item global-pos__item">
+										<div class="teamiteam__item-img">
 											<img src="images/teamiteam/1.jpg" alt="foto">
 											<div class="soc">
 												<ul>
@@ -430,15 +418,15 @@
 												</ul>
 											</div>
 										</div>
-										<div class="teamiteam_info">
+										<div class="teamiteam__info">
 											<p class="name">Razan Mark</p>
 											<p class="profession">Founder</p>
 										</div>	
 									</div>
 								</div>
-								<div class="teamiteam_col col-4 col_global ">
-									<div class="teamiteam_item item_global">
-										<div class="teamiteam_img">
+								<div class="teamiteam__col col-4 global-pos">
+									<div class="teamiteam__item global-pos__item">
+										<div class="teamiteam__item-img">
 											<img src="images/teamiteam/2.jpg" alt="foto">
 											<div class="soc">
 												<ul>
@@ -450,15 +438,15 @@
 												</ul>
 											</div>
 										</div>
-										<div class="teamiteam_info">
+										<div class="teamiteam__info">
 											<p class="name">Alexander Doe</p>
 											<p class="profession">Designer</p>
 										</div>	
 									</div>
 								</div>
-								<div class="teamiteam_col col-4 col_global ">
-									<div class="teamiteam_item item_global">
-										<div class="teamiteam_img">
+								<div class="teamiteam__col col-4 global-pos">
+									<div class="teamiteam__item global-pos__item">
+										<div class="teamiteam__item-img">
 											<img src="images/teamiteam/3.jpg" alt="foto">
 											<div class="soc">
 												<ul>
@@ -470,7 +458,7 @@
 												</ul>
 											</div>
 										</div>
-										<div class="teamiteam_info">
+										<div class="teamiteam__info">
 											<p class="name">Elina Fitnesh</p>
 											<p class="profession">App Developer</p>
 										</div>	
@@ -481,68 +469,65 @@
 					</div>
 				</div>
 			</section>
-			<section id="blogs">
+			<section id="blogs" class="blogs">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<h2>Recent Blogs</h2>
 							<div class="row">
-								<div class="blogs_col col-4 col_global ">
-									<div class="blogs_item item_global">
-										<div class="blogs_img">
+								<div class="blogs__col col-4 global-pos ">
+									<div class="blogs__item global-pos__item">
+										<div class="blogs__item-img">
 											<a href="#">
 												<img src="images/blogs/1.jpg" alt="foto">
 											</a>
 											
 										</div>
-										<div class="blogs_info">
+										<div class="blogs__info">
 											<a href="#"><h3>Ways To Motivate Yourself</h3></a>
 											<p>Ways To Motivate Yourself. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod …</p>
 										</div>	
 									</div>
 								</div>
-								<div class="blogs_col col-4 col_global ">
-									<div class="blogs_item item_global">
-										<div class="blogs_img">
+								<div class="blogs__col col-4 global-pos ">
+									<div class="blogs__item global-pos__item">
+										<div class="blogs__item-img">
 											<a href="#">
 												<img src="images/blogs/2.jpg" alt="foto">
 											</a>
 										</div>
-										<div class="blogs_info">
+										<div class="blogs__info">
 											<a href="#"><h3>Create A WordPress Theme</h3></a>
 											<p>Create A WordPress Theme. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod …</p>
-										</div>	
+										</div>
 									</div>
 								</div>
-								<div class="blogs_col col-4 col_global ">
-									<div class="blogs_item item_global">
-										<div class="blogs_img">
+								<div class="blogs__col col-4 global-pos ">
+									<div class="blogs__item global-pos__item">
+										<div class="blogs__item-img">
 											<a href="#">
 												<img src="images/blogs/3.jpg" alt="foto">
 											</a>
-											
 										</div>
-										<div class="blogs_info">
+										<div class="blogs__info">
 											<a href="#"><h3>Top Graphic Design Topics</h3></a>
 											<p>Top Graphic Design Topics. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod …</p>
-				
 										</div>	
 									</div>
 								</div>
-								
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="touch">
+			<section id="touch" class="touch">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<h2>Get In Touch</h2>
 							<div class="row">
 								<div class="col-4">
-									<div class="touch_wrap">
+									<div class="touch__wrap">
 										<div class="email">
 											<h3>Email</h3>
 											<ul>
@@ -564,8 +549,8 @@
 									</div>
 								</div>
 								<div class="col-8">
-									<form action="#" class="touch_form" id="form">
-										<div class="row justify-content-between row_touch">
+									<form action="#" class="touch__form" id="form">
+										<div class="row justify-content-between touch__row">
 											<div class="col-4 ">
 												<input type="text" name="user" placeholder="Username *">
 											</div>
@@ -587,7 +572,7 @@
 								</div>
 							</div>	
 						</div>
-						<div class="col-12 soc">
+						<div class="col-12 touch__soc soc">
 							<ul>
 								<li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
 								<li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -600,15 +585,15 @@
 				</div>
 			</section>	
 		</main>
-		<footer>
+		<footer class="footer">
 			<div class="container">
-				<div class="row footer_row">
+				<div class="row footer__row">
 					<div class="col-6">
 						<p>	&#169; Copyrights Inaikas 2023. All Rights Reserved.</p>
 					</div>
 					<div class="col-6 email">
 						<p>Newsletter Signup </p>
-						<div class="email_wrap">
+						<div class="email__wrap">
 							<input type="text" placeholder="Email" id="email">
 							<label for="email"><i class="fa-solid fa-envelope"></i></label>	
 						</div>

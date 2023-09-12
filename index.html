@@ -11,11 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/jquery.scrollbar.js"></script>
 </head>
-
 <body>
 	<div class="welcome">
 		<p>Keira</p>
@@ -46,7 +42,7 @@
 									<div class="nav__radius-wrap">
 										<div class="container">
 											<div class="row nav__row">
-												<div class="col-md-6 col-sm-12 scrollbar-inner">
+												<div class="col-md-6 col-sm-12">
 													<ul class="nav__menu scrollbar-inner" id="menu">
 														<li>
 															<span class="nav__menu-link"><p class="number">01</p>Home</span>
@@ -93,7 +89,6 @@
 								</div>
 								<div class="nav__red"></div>	
 							</div>
-							
 						</div>
 					</div>	
 				</div>	
@@ -601,7 +596,14 @@
 			</div>
 		</footer>
 	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+    <script src="js/jquery.scrollbar.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.scrollbar-inner').scrollbar();
+		});
+	</script>
 </body>
-
 </html>

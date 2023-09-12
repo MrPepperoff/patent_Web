@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   /* Цвета */
   --red: #ff3d4f;
@@ -199,10 +202,14 @@ body {
 }
 
 .wrap {
-  height: 100vh;
+  min-height: 100vh;
   overflow: auto;
   position: relative;
   cursor: url("../images/cursor8x8.cur") 7 7, auto;
+}
+
+.scrollbar-inner {
+  height: 100vh;
 }
 
 .header {
@@ -448,6 +455,30 @@ body {
 @media (max-width: 390px) {
   .header__center__prof #element {
     font-size: 4rem;
+  }
+}
+.header__center__prof .typed-cursor {
+  font-size: 2rem;
+  margin-left: 5px;
+}
+@media (max-width: 991px) {
+  .header__center__prof .typed-cursor {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .header__center__prof .typed-cursor {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 575px) {
+  .header__center__prof .typed-cursor {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 390px) {
+  .header__center__prof .typed-cursor {
+    font-size: 1rem;
   }
 }
 .header__bottom {

@@ -3,10 +3,6 @@ let body = document.querySelector('body');
 let welcome = document.querySelector('.welcome');
 let btnWelcome = welcome.querySelector('button');
 let wrap = document.querySelector('.wrap');
-// scroll 
-jQuery(document).ready(function(){
-    jQuery('.scrollbar-inner').scrollbar();
-});
 
 // прокрутка страницы в самый низ
 // Window.scrollTo()прокручивает до определенного набора координат в документе.
@@ -14,19 +10,30 @@ jQuery(document).ready(function(){
 // отменяет прокрутку до нажатия на кнопку 
 
 // Анимация курсора
-(function(){
-    wrap.addEventListener('mousemove', (evt)=>{
-            let cursor = document.querySelector('.cursor');
-            cursor.style.left = evt.clientX - 25  + 'px';
-            cursor.style.top = evt.clientY - 25 + window.pageYOffset + 'px';
-            
-            // console.log(window.pageYOffset);
-        })
-})();
 
-// Полностью переписать переход от welcome к wrap
-// проблема: экран скачет
-// 
+wrap.addEventListener('mousemove', (evt)=>{
+    let cursor = document.querySelector('.cursor');
+    cursor.style.left = evt.clientX - 25  + 'px';
+    cursor.style.top = evt.clientY - 25 + window.scrollY + 'px';
+
+});
+wrap.addEventListener('click', ()=>{
+
+    let scrolled = document.getElementsByClassName("wrap");
+    console.log(scrolled);
+    // console.log(window);
+});
+
+wrap.addEventListener('scroll', function() {
+    let test = document.querySelector('.wrap').scrollTop;
+    console.log(test);
+  });
+
+
+
+
+
+
 let pEl = welcome.querySelector('p');
 let crossing = document.querySelector('.crossing');
 

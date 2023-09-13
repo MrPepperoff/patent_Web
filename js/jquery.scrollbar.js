@@ -78,6 +78,7 @@
 
             $(window).resize(function () {
                 var forceUpdate = false;
+                
                 if (browser.scroll && (browser.scroll.height || browser.scroll.width)) {
                     var scroll = getBrowserScrollSize();
                     if (scroll.height !== browser.scroll.height || scroll.width !== browser.scroll.width) {
@@ -87,6 +88,7 @@
                 }
                 updateScrollbars(forceUpdate);
             });
+        
         }
 
         this.container = container;
@@ -99,7 +101,7 @@
         container.data(browser.data.name, this);
         browser.scrolls.add(this);
     };
-
+    
     BaseScrollbar.prototype = {
 
         destroy: function () {

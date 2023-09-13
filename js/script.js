@@ -7,33 +7,17 @@ let wrap = document.querySelector('.wrap');
 // прокрутка страницы в самый низ
 // Window.scrollTo()прокручивает до определенного набора координат в документе.
 
+    
 // отменяет прокрутку до нажатия на кнопку 
 
-// Анимация курсора
 
+// Анимация курсора
 wrap.addEventListener('mousemove', (evt)=>{
     let cursor = document.querySelector('.cursor');
-    cursor.style.left = evt.clientX - 25  + 'px';
-    cursor.style.top = evt.clientY - 25 + window.scrollY + 'px';
-
+    cursor.style.left = evt.clientX - 25 + 'px';
+    cursor.style.top = evt.clientY - 25 + 'px';
 });
-wrap.addEventListener('click', ()=>{
-
-    let scrolled = document.getElementsByClassName("wrap");
-    console.log(scrolled);
-    // console.log(window);
-});
-
-wrap.addEventListener('scroll', function() {
-    let test = document.querySelector('.wrap').scrollTop;
-    console.log(test);
-  });
-
-
-
-
-
-
+// Анимация прокрутки страницы
 let pEl = welcome.querySelector('p');
 let crossing = document.querySelector('.crossing');
 
@@ -43,15 +27,25 @@ btnWelcome.addEventListener('click', (evt)=>{
         pEl.classList.add('active');
         setTimeout(function() {
             crossing.classList.add('active');
-        }, 500);
-        
+            let i = 8000;
+            let j = i;
+            $('div.scrollbar-inner').scrollTop(i);
+            for( ; i >= 0; i--){
+                setTimeout(function() {
+                    j += i;
+                    $('div.scrollbar-inner').scrollTop(j);   
+                }, i/6);
+            }
+        }, 500);  
     }, 1000);
     setTimeout(function() {
-        welcome.classList.add('active');     
+        welcome.classList.add('active'); 
     }, 2000);
 })
 
-
+// for(let i = 100; i >= 0; i--){
+//     console.log('2 - ', i);
+// }
 
 
 

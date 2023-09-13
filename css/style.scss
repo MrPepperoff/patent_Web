@@ -33,7 +33,7 @@
     pointer-events: none;
     z-index: 99;
 	
-    // transition-duration: 200ms;
+    transition-duration: 200ms;
 	&:after {
 		content: "";
 		width: 5px;
@@ -195,12 +195,13 @@ body{
 }
 .wrap{
     min-height: 100vh;
-    overflow: auto;
+    overflow: hidden;
 	position: relative;
 	cursor: url('../images/cursor8x8.cur') 7 7, auto;
 }
 .scrollbar-inner{
 	height: 100vh;
+
 }
 .header{
 	width: 100%;

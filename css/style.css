@@ -32,6 +32,7 @@
   animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
   z-index: 99;
+  transition-duration: 200ms;
 }
 .cursor:after {
   content: "";
@@ -203,7 +204,7 @@ body {
 
 .wrap {
   min-height: 100vh;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   cursor: url("../images/cursor8x8.cur") 7 7, auto;
 }
